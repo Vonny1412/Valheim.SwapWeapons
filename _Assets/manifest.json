@@ -1,7 +1,7 @@
 {
   "name": "SwapWeapons",
   "version_number": "0.0.0",
-  "website_url": "",
+  "website_url": "https://github.com/Vonny1412/Valheim.SwapWeapons",
   "description": "Swap between your current and previously equipped weapons with a single key press.",
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.2350"

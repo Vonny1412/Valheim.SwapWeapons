@@ -1,35 +1,33 @@
-# Hold To Command
+# Swap Weapons
 
-[GitHub Repository](https://github.com/Vonny1412/Valheim.HoldToCommand)
+[GitHub Repository](https://github.com/Vonny1412/Valheim.SwapWeapons)
 
-A small quality-of-life mod that separates **petting** and **commanding** tamed creatures.
+A small quality-of-life mod that lets you quickly swap between your **current and previously equipped weapons** with a single key press.
 
-In vanilla Valheim, interacting with a commandable tameable will immediately issue a command instead of allowing you to pet it.
-
-This mod changes that behavior to:
-
-* **Tap** → Pet creature
-* **Hold** → Command creature
-* **Shift + Use** → Rename (unchanged vanilla behavior)
+Instead of manually switching back and forth between weapons or tools, Swap Weapons remembers your previous equipment and allows you to restore it instantly.
 
 ---
 
 ## Features
 
-* Restores the ability to pet commandable creatures
-* Adds intentional hold-to-command interaction
-* Adjusted hover text to reflect new controls
-* Fully localized (community language support)
-* Uses external translation file (editable)
+* Swap between current and previously equipped weapons with a single key press
+* Supports one-handed weapons, two-handed weapons, bows, shields, torches, and tools
+* Correctly handles left- and right-hand equipment
+* Automatically restores weapons after swimming (configurable)
+* Integrates with Valheim's normal weapon sheathing behavior
 * Lightweight and fully standalone (no dependencies)
 
 ---
 
 ## Configuration
 
-HoldToCommand provides the configurable option **HoldThreshold**  
-to define how long the Use key must be held before a command is issued.  
-Adjust the value to match your preferred hold duration.  
+Swap Weapons provides the following configurable options:
+
+* **SwapWeaponsKey** — Key used to swap between your current and previously equipped weapons
+* **AutoEquipOnLeavingWater** — Automatically restores weapons that were unequipped when entering water
+* **EnableDebugLogging** — Enables detailed logging for troubleshooting
+
+The default key for swapping weapons is **Q**.
 
 ---
 
@@ -45,41 +43,10 @@ Valheim/
 This will install:
 
 ```
-BepInEx/plugins/HoldToCommand/HoldToCommand.dll
-BepInEx/plugins/HoldToCommand/HoldToCommand.Translations.txt
+BepInEx/plugins/SwapWeapons/SwapWeapons.dll
 ```
 
 3. Launch the game
-
----
-
-## Translations
-
-HoldToCommand uses an external file:
-
-```
-HoldToCommand.Translations.txt
-```
-
-You can edit or extend this file to customize translations.
-
-Format:
-
-```
-Language|Hold $1|Command
-```
-
-Example:
-
-```
-English|Hold $1|Command
-German|$1 halten|Befehlen
-```
-
-* `$1` will automatically be replaced with the Use key (e.g. E).
-* If a language is missing, English is used as fallback.
-
-Community translations are welcome.
 
 ---
 
@@ -89,6 +56,22 @@ Community translations are welcome.
 * Works on vanilla servers
 * Safe to install or remove at any time
 * No impact on servers without the mod
+
+---
+
+## Credits
+
+Swap Weapons is based on the original **Last Used Weapons** mod by **bakaspaceman**.
+
+The original mod provided the foundation and core concept for switching between previously equipped weapons. Swap Weapons is an extensively reworked and updated continuation, adapted for current versions of Valheim with fixes and changes to the original implementation.
+
+**Original mod:**
+
+* Plugin ID: `bakaspaceman.LastUsedWeapons`
+* [Nexus Mods](https://www.nexusmods.com/valheim/mods/259)
+* [Thunderstore](https://thunderstore.io/c/valheim/p/bakaspaceman/Last_Used_Weapons/)
+* [GitHub Repository](https://github.com/bakaspaceman/ValheimMods)
+* Original license: MIT
 
 ---
 
