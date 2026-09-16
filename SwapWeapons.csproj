@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<ProjectName>SwapWeapons</ProjectName>
+		<AssemblyName>$(ProjectName)</AssemblyName>
+		<RootNamespace>$(ProjectName)</RootNamespace>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<VersionMajor>1</VersionMajor>
+		<VersionMinor>0</VersionMinor>
+		<VersionPatch>0</VersionPatch>
+		<VersionSuffix></VersionSuffix>
+		<Authors></Authors>
+		<Product>Swap Weapons</Product>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<PluginFile>SwapWeapons</PluginFile>
+		<PluginGUID>Vonny1412.SwapWeapons</PluginGUID>
+		<PluginName>$(Product)</PluginName>
+		<PluginClass>BepInExPlugin</PluginClass>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<CopyToPluginsSubDirectory>SwapWeapons</CopyToPluginsSubDirectory>
+	</PropertyGroup>
+
+	<Import Project="$(SolutionDir)\Valheim.Paths.props" />
+	<Import Project="$(SolutionDir)\Valheim.Libraries.props" />
+	<Import Project="$(SolutionDir)\Valheim.Mods.targets" />
+
+</Project>
