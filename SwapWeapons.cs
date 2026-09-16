@@ -151,9 +151,9 @@ namespace SwapWeapons
 
             ItemDrop.ItemData.ItemType? rightItemType = _lastRightItem?.m_shared?.m_itemType;
             ItemDrop.ItemData.ItemType? leftItemType = _lastLeftItem?.m_shared?.m_itemType;
-            if (leftItemType == ItemDrop.ItemData.ItemType.Bow ||
-                rightItemType == ItemDrop.ItemData.ItemType.TwoHandedWeapon ||
-                rightItemType == ItemDrop.ItemData.ItemType.Tool)
+            if (rightItemType == ItemDrop.ItemData.ItemType.TwoHandedWeapon ||
+                rightItemType == ItemDrop.ItemData.ItemType.Tool ||
+                leftItemType == ItemDrop.ItemData.ItemType.Bow)
             {
                 _lastRightItem = null;
                 DebugLog("SetLastLeftItem: cleared last right item");
@@ -259,9 +259,9 @@ namespace SwapWeapons
                 }
                 else
                 {
-                    bool cachePreviousLeftItem = previousLeftItem != null &&
-                                                 _lastRightItem?.m_shared?.m_itemType == ItemDrop.ItemData.ItemType.Tool;
-                    if (cachePreviousLeftItem)
+                    //bool cachePreviousLeftItem = previousLeftItem != null &&
+                    //                             _lastRightItem?.m_shared?.m_itemType == ItemDrop.ItemData.ItemType.Tool;
+                    //if (cachePreviousLeftItem)
                     {
                         _lastLeftItem = previousLeftItem;
                     }
